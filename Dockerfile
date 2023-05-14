@@ -5,7 +5,7 @@ FROM mysql:8.0
 ENV MYSQL_ROOT_PASSWORD mysecretpassword
 
 # Expose the default MySQL port (3306) to the host
-EXPOSE 3306
+EXPOSE 3306/tcp
 
 # Allow remote connections to the database
 RUN echo "bind-address=0.0.0.0" >> /etc/mysql/conf.d/docker.cnf
